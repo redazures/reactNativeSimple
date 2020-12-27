@@ -1,7 +1,6 @@
 import React,{ useContext } from 'react'
 import { ImageBackground, StyleSheet } from 'react-native'
 
-import SafeScreen from '../components/SafeScreen'
 import AppText from '../components/AppText'
 import AuthContext from '../auth/AuthContext'
 import AppButton from '../components/AppButton'

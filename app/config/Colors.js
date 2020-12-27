@@ -1,9 +1,9 @@
 import { greaterThan } from "react-native-reanimated";
 
 export default {
-    primary:"green",
-    secondary:"red",
-    black:'black',
+    primary:"#145b9c",
+    secondary:"#cc2c11",
+    black:'#030303',
     white:'white',
-    medium:'grey',
+    medium:'#7477d90',
 }

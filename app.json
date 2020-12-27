@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "This is a simple app with a few pages",
+    "githubUrl": "https://github.com/redazures/reactNativeSimple"
   }
 }
