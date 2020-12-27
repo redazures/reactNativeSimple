@@ -10,13 +10,14 @@ import Colors from '../config/Colors'
 
 const Post =({navigation})=>(
   <SafeScreen>
-    <AppText onPress={()=>navigation.navigate("Content")}>Kamara rushes for 6 Touchdowns</AppText>
+    <AppText onPress={()=>navigation.navigate("Content")}>Travis Kelce Makes History *Click Here*</AppText>
   </SafeScreen>
 )
 
 const Content =()=>(
   <SafeScreen>
-    <AppText>What are we going to do now?</AppText>
+    <AppText>Travis Kelce now has 1,400 receiving yards, the most by a TE in a single season in NFL history.
+        Absolutely incredible.</AppText>
   </SafeScreen>
 )
 
@@ -50,3 +51,4 @@ const StackNavigator =()=>{
 }
 
 export default StackNavigator
+
