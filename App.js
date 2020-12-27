@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import SafeScreen from './app/components/SafeScreen'
 import AuthContext from './app/auth/AuthContext'
 import AppText from './app/components/AppText'
+import WelcomeScreen from './app/Screens/WelcomeScreen'
 
 const Post =({navigation})=>(
   <SafeScreen>
@@ -32,7 +33,6 @@ const StackNavigator =()=>(
 
 const Welcome = ()=>{
   const context = useContext(AuthContext)
-  console.log("this is welcome",context.user)
   return(
     <SafeScreen>
       <AppText>This is the Welcome Screen</AppText>
@@ -43,11 +43,10 @@ const Welcome = ()=>{
 
 export default function App() {
   const [user,setUser]  = useState(false)
-  console.log(user)
   return (
     <AuthContext.Provider value={{user,setUser}}>
       <NavigationContainer>
-        {user ?  <StackNavigator/> : <Welcome/>}
+        {user ?  <StackNavigator/> : <WelcomeScreen/>}
       </NavigationContainer>
     </AuthContext.Provider>
   );
