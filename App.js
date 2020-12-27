@@ -9,6 +9,7 @@ import AuthContext from './app/auth/AuthContext'
 import AppText from './app/components/AppText'
 import WelcomeScreen from './app/Screens/WelcomeScreen'
 import StackNavigator from './app/Screens/StackNavigation'
+import AdviceScreen from './app/Screens/AdviceScreen'
 
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <AuthContext.Provider value={{user,setUser}}>
       <NavigationContainer>
-        {user ?  <StackNavigator/> : <WelcomeScreen/>}
+        <AdviceScreen/>
       </NavigationContainer>
     </AuthContext.Provider>
   );
@@ -30,3 +31,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+//{user ?  <StackNavigator/> : <WelcomeScreen/>}
