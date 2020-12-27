@@ -1,21 +1,22 @@
 import React, { useContext, useState, createContext } from 'react';
-import { StyleSheet, Text, Button } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import SafeScreen from './app/components/SafeScreen'
 import AuthContext from './app/auth/AuthContext'
+import AppText from './app/components/AppText'
 
 const Post =({navigation})=>(
   <SafeScreen>
-    <Text onPress={()=>navigation.navigate("Content")}>Kamara rushes for 6 Touchdowns</Text>
+    <AppText onPress={()=>navigation.navigate("Content")}>Kamara rushes for 6 Touchdowns</AppText>
   </SafeScreen>
 )
 
 const Content =()=>(
   <SafeScreen>
-    <Text>What are we going to do now?</Text>
+    <AppText>What are we going to do now?</AppText>
   </SafeScreen>
 )
 
@@ -34,7 +35,7 @@ const Welcome = ()=>{
   console.log("this is welcome",context.user)
   return(
     <SafeScreen>
-      <Text>This is the Welcome Screen</Text>
+      <AppText>This is the Welcome Screen</AppText>
       <Button title="Login" onPress={()=>context.setUser(true)}/>
     </SafeScreen>
   )
