@@ -31,16 +31,6 @@ const StackNavigator =()=>(
   </Stack.Navigator>
 )
 
-const Welcome = ()=>{
-  const context = useContext(AuthContext)
-  return(
-    <SafeScreen>
-      <AppText>This is the Welcome Screen</AppText>
-      <Button title="Login" onPress={()=>context.setUser(true)}/>
-    </SafeScreen>
-  )
-}
-
 export default function App() {
   const [user,setUser]  = useState(false)
   return (

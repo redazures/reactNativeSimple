@@ -11,14 +11,14 @@ const WelcomeScreen = ()=>{
     const context = useContext(AuthContext)
     return(
       <ImageBackground
-        style={styles.background}
         source={image}
+        style={styles.background}
       >
-        <AppText style={styles.text}>Simple React</AppText>
-        <AppButton 
-          title="Login" 
-          onPress={()=>context.setUser(true)}
-        />
+            <AppText style={styles.text}>Simple React</AppText>
+            <AppButton 
+              title="Login" 
+              onPress={()=>context.setUser(true)}
+            />
       </ImageBackground>
     )
   }
