@@ -20,7 +20,7 @@ const AdviceScreen =()=>{
 
     return(
         <SafeAreaView style={styles.container}>
-            <View style={styles.fortune}>
+            <View>
                 <AppText style={styles.text}>
                     {advice}
                 </AppText>
@@ -53,9 +53,6 @@ const styles  = StyleSheet.create({
         justifyContent:"center",
         backgroundColor:Colors.medium,
         
-    },
-    fortune:{
-        width:"100%",
     },
     text:{
         fontSize:30,

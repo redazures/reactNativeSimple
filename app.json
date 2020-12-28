@@ -28,7 +28,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "This is a simple app with a few pages",
+    "description": "This is a simple app with a few pages. There is Tab Navigation, Stack Navigation, and a simple login button",
     "githubUrl": "https://github.com/redazures/reactNativeSimple"
   }
 }

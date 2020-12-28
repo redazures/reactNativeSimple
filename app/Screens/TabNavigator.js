@@ -5,12 +5,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AdviceScreen from './AdviceScreen'
 import StackNavigation from './StackNavigation'
 import Colors from '../config/Colors'
+import InterestScreen from './InterestScreen'
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = ()=>(
     <Tab.Navigator>
         <Tab.Screen name="Advice" component={AdviceScreen}/>
+        <Tab.Screen name="Interest" component={InterestScreen}/>
         <Tab.Screen name="Post" component={StackNavigation}/>
     </Tab.Navigator>
 )

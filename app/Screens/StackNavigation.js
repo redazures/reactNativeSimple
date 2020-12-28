@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { enableScreens, View } from 'react-native-screens';
+import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { Button, StyleSheet } from 'react-native'
 
@@ -8,7 +8,15 @@ import AppText from '../components/AppText'
 import AuthContext from '../auth/AuthContext'
 import Colors from '../config/Colors'
 
-const Post =({navigation})=>(
+const posts = [
+    {
+        key:1,
+        topic:"Travis Kelce Makes History *Click Here*",
+        content:"Travis Kelce now has 1,400 receiving yards, the most by a TE in a single season in NFL history. Absolutely incredible."
+    }
+]
+
+const Post =({navigation},topic)=>(
   <SafeScreen style={styles.container}>
     <AppText onPress={()=>navigation.navigate("Content")}>Travis Kelce Makes History *Click Here*</AppText>
   </SafeScreen>
@@ -20,7 +28,6 @@ const Content =()=>(
         Absolutely incredible.</AppText>
   </SafeScreen>
 )
-
 
 enableScreens();
 const Stack = createNativeStackNavigator();
