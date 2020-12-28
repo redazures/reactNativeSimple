@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { enableScreens, View } from 'react-native-screens';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import { Button } from 'react-native'
+import { Button, StyleSheet } from 'react-native'
 
 import SafeScreen from '../components/SafeScreen'
 import AppText from '../components/AppText'
@@ -9,7 +9,7 @@ import AuthContext from '../auth/AuthContext'
 import Colors from '../config/Colors'
 
 const Post =({navigation})=>(
-  <SafeScreen>
+  <SafeScreen style={styles.container}>
     <AppText onPress={()=>navigation.navigate("Content")}>Travis Kelce Makes History *Click Here*</AppText>
   </SafeScreen>
 )
@@ -31,9 +31,7 @@ const StackNavigator =()=>{
     const context = useContext(AuthContext)
     return(
         <Stack.Navigator initialRouteName="Post">
-            <Stack.Screen 
-                name="Post" 
-                component={Post}
+            <Stack.Screen name="Post" component={Post}
                 options={{
                     headerRight: () => (
                             <Button
@@ -52,3 +50,8 @@ const StackNavigator =()=>{
 
 export default StackNavigator
 
+const styles  = StyleSheet.create({
+    container:{
+        backgroundColor:Colors.medium,
+    },
+})

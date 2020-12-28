@@ -1,14 +1,16 @@
-import React, {useState} from 'react'
-import { StyleSheet, Alert, TouchableOpacity, View } from 'react-native'
+import React, { useState, useContext } from 'react'
+import { StyleSheet, Alert, View } from 'react-native'
 
 import AppButton from '../components/AppButton'
 import Colors from '../config/Colors'
 import AppText from '../components/AppText'
 import SafeAreaView from '../components/SafeScreen'
+import AuthContext from '../auth/AuthContext'
 
 
 const AdviceScreen =()=>{
     const [advice, setAdvice] = useState("Ask a Question")
+    const context = useContext(AuthContext)
 
     const getAdvice=()=>{
         fetch('https://api.adviceslip.com/advice')
@@ -31,6 +33,13 @@ const AdviceScreen =()=>{
                         getAdvice()
                     }}
                 />
+                <AppButton 
+                    title="logout"
+                    color="secondary"
+                    onPress={()=>{
+                        context.setUser(false)
+                    }}
+                />
             </View>
         </SafeAreaView>
 
@@ -42,9 +51,8 @@ export default AdviceScreen
 const styles  = StyleSheet.create({
     container:{
         justifyContent:"center",
-        alignItems:"center",
         backgroundColor:Colors.medium,
-        width:'100%'
+        
     },
     fortune:{
         width:"100%",

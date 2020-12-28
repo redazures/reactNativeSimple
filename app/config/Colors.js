@@ -1,4 +1,4 @@
-import { greaterThan } from "react-native-reanimated";
+import React from 'react'
 
 export default {
     primary:"#145b9c",
